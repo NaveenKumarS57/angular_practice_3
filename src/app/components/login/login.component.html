@@ -1,0 +1,29 @@
+<div id="main">
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="centre centre" fxFill>
+    <mat-card class="box">
+      <mat-card-header style="font-size: 30px;">Login</mat-card-header>
+      <mat-card-content>
+        <form class="example-form" [formGroup]="loginForm" (ngSubmit)="Login()">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" formControlName="mailid" placeholder="Enter User Name" required>
+          <mat-error *ngIf="loginForm.invalid">Please enter mailid</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" formControlName="password" placeholder="Enter Password" required>
+          <mat-error *ngIf="loginForm.invalid">Please enter password</mat-error>
+        </mat-form-field>
+        <button class="btn-block" mat-raised-button [disabled]="loginForm.invalid" color="primary" type="submit">Login</button>
+
+      </form>
+        <mat-card-content>
+          <br>
+          <p>If you are not a registered user kindly signup</p>
+          <br>
+          <button class="btn-block" mat-raised-button [routerLink]="'/signup'"  color="primary" type="submit">signup</button>
+          <button mat-stroked-button color="warn" [routerLink]="'/home'" fxFill>HOME</button>
+        </mat-card-content>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

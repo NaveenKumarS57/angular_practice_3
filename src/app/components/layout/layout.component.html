@@ -1,0 +1,132 @@
+
+<div>
+  <div fxFill>
+    <mat-toolbar class="mat-elevation-z5">
+      <button class="home-btn" mat-flat-button style="align-self: center;" [routerLink]="'/home'">
+        <img src="assets/images/Kaar-Logo1.png" width="100%" fxFill>
+
+      </button>
+
+      <div>
+        <button mat-icon-button class="example-icon" (click)="toggleNav(sidenav)" aria-label="Toggle sidenav">
+          <mat-icon arial-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
+      <span>Dashboard Manu</span>
+      <span class="example-spacer"></span>
+      <div class="dropdown">
+        <button mat-flat-button class="example-icon">naveen</button>
+        <div class="dropdown-content">
+          <a href="home/delivery-list">Delivery List</a>
+          <a href="home/inquiry-data">Inquiry Data</a>
+          <a href="home/saleorder-data">Sale Order Data</a>
+        </div>
+      </div>
+      <span class="example-spacer-btw"></span>
+      <div class="dropdown">
+        <button mat-flat-button class="example-icon">naveen</button>
+        <div class="dropdown-content">
+          <a href="home/delivery-list">Delivery List</a>
+          <a href="home/inquiry-data">Inquiry Data</a>
+          <a href="home/saleorder-data">Sale Order Data</a>
+        </div>
+      </div>
+      <span class="example-spacer-btw"></span>
+      <div class="dropdown">
+        <button mat-raised-button class="example-icon">naveen</button>
+        <div class="dropdown-content">
+          <a href="next/delivery-list">Delivery List</a>
+          <a href="next/inquiry-data">Inquiry Data</a>
+          <a href="next/saleorder-data">Sale Order Data</a>
+        </div>
+      </div>
+      <span class="example-spacer-btw"></span>
+      <div class="dropdown">
+        <button mat-raised-button class="example-icon">naveen</button>
+        <div class="dropdown-content">
+          <a href="next/delivery-list">Delivery List</a>
+          <a href="next/inquiry-data">Inquiry Data</a>
+          <a href="next/saleorder-data">Sale Order Data</a>
+        </div>
+      </div>
+
+      <span class="example-spacer"></span>
+      <button class="logout-btn" mat-raised-button [routerLink]="'/login'" type="submit" (click)="logoutsnackbar()">Log out</button>
+    </mat-toolbar>
+  </div>
+  <div>
+    <mat-sidenav-container class="image-ocean">
+      <mat-sidenav #sidenav mode="side" opened class="vertical-menu">
+        <mat-nav-list style="width:250px">
+          <mat-accordion>
+            <mat-expansion-panel style="width: 250px;">
+              <mat-expansion-panel-header>
+                <mat-icon aria-label="Toggle sidenav" style="left: 0%;"></mat-icon>
+                <mat-icon  class="example-spacer-btw" arial-label="Side nav toggle icon">menu</mat-icon>
+                <span>click</span>
+              </mat-expansion-panel-header>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'delivery-list'">a</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'inquiry-data'">b</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'saleorder-data'">c</button>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+          <!-- <mat-accordion> -->
+            <mat-expansion-panel style="width: 250px;">
+              <mat-expansion-panel-header>
+                <mat-icon aria-label="Toggle sidenav" style="left: 0%;"></mat-icon>
+                <mat-icon  class="example-spacer-btw" arial-label="Side nav toggle icon">menu</mat-icon>
+                <span>click</span>
+              </mat-expansion-panel-header>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'delivery-list'">a</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'inquiry-data'">b</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'saleorder-data'">c</button>
+            </mat-expansion-panel>
+          <!-- </mat-accordion> -->
+
+          <!-- <mat-accordion> -->
+            <mat-expansion-panel style="width: 250px;">
+              <mat-expansion-panel-header>
+                <mat-icon aria-label="Toggle sidenav" style="left: 0%;"></mat-icon>
+                <mat-icon  class="example-spacer-btw" arial-label="Side nav toggle icon">menu</mat-icon>
+                <span>click</span>
+              </mat-expansion-panel-header>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'delivery-list'">a</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'inquiry-data'">b</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'saleorder-data'">c</button>
+            </mat-expansion-panel>
+          <!-- </mat-accordion> -->
+
+          <mat-accordion>
+            <mat-expansion-panel style="width: 250px;">
+              <mat-expansion-panel-header>
+                <mat-icon aria-label="Toggle sidenav" style="left: 0%;"></mat-icon>
+                <mat-icon  class="example-spacer-btw" arial-label="Side nav toggle icon">menu</mat-icon>
+                <span>click</span>
+              </mat-expansion-panel-header>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'delivery-list'">a</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'inquiry-data'">b</button>
+                <button mat-flat-button  style="width: 250px;" [routerLink]="'saleorder-data'">c</button>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-nav-list>
+
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div>
+          <body>
+            <span class="welcome-font">
+              Our Project Welocmes you all..!</span>
+
+          </body>
+        </div>
+
+        <p style="height:85vh">
+          <router-outlet></router-outlet>
+        </p>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+
+</div>
+

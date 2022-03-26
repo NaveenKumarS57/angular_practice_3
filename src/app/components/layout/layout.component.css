@@ -1,0 +1,168 @@
+
+
+.home-btn{
+  width: 75px;height: 55px;
+  align-content: center;
+  top: 0px;
+}
+/* .image-ocean{
+  width: 100%;
+  background-image: url("/assets/images/ocean.jpg");
+  height: 100%;
+} */
+mat-toolbar{
+  position: fixed;
+  top: 0%;
+  background-color: #d5dad7;
+  z-index: 999;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #cacecc;
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  font-size: 8px;
+  border: none;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 14px;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;direction: ltr;}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #d5dbd6;}
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.logout-btn:hover{
+  background-color: #e76868;
+  color: white;
+}
+.example-spacer-btw{
+  flex:0.1 auto;
+}
+.mat-elevation-z5{
+  position: relative;
+  z-index: 2;
+}
+.mat-sidenav a:hover{
+  color: red;
+}
+
+.dashboard-dropdown-btn{
+  min-width: 300px;
+}
+
+.welcome-font{
+  font-size: 40px;
+  min-height: 40px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* #menu {
+  margin: 0;
+  width: auto;
+  background-color: rgb(236, 217, 236);
+  font-size: 16px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  height: auto;
+}
+
+#menu li {
+  display: inline;
+  padding: 8px;
+}
+
+#menu a {
+  color: #FFF;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background-color: #1B191B;
+  color: #FFF;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+#menu li .active {
+  background-color: #1B191B;
+  color: #FFF;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+} */
+
+/* .menu-but:hover{
+
+} */
+
+/* .example-spacer {
+  flex: 1 1 auto;
+}
+.grid {
+  color: black;
+  background-color: aquamarine;
+  width: 800px;
+}
+#but1 {
+  color: #f0fff3;
+  background-color: #155724;
+  background-image: url("/assets/images/kaar-logo1.png");
+}
+#sect1 {
+  height: 10%;
+  color: #fff;background-image: url("/assets/images/sunflower-field.jpg");
+  background-size: 10% ;
+  background-size: auto;
+}
+.col-2 {
+  column-rule: 10rem;
+}
+#menu-but:hover{
+  background-color: lightblue;
+
+}
+.logout-but:hover{
+  background-color: rgb(236, 128, 120);
+} */
