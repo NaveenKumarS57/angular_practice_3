@@ -23,10 +23,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     localStorage.clear();
+    // const Name: string;
     this.loginForm = this.formBuilder.group({
       mailid:[''],
       password:['']
     })
+    this.matSnackBar.open("Please Do Login",'Thank you', { duration: 4000 });
     // this.loadpost();
   }
   // Login method define localStorage.setItem('token', res.token);
@@ -38,7 +40,10 @@ export class LoginComponent implements OnInit {
   Login(){
     this.api.Log_In(this.loginForm.value).subscribe((res)=>{
       // alert(JSON.stringify(res));
+
       if(res.token){
+        // Name = res.data;{res.data},
+        // alert(JSON.stringify(res));
         this.matSnackBar.open("You are uccessfully Logged In",'Okay', { duration: 4000 });
         this.loginForm.reset();
         this.router.navigate(['home']);

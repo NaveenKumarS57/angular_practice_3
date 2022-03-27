@@ -65,11 +65,14 @@ mat-toolbar{
   flex:0.1 auto;
 }
 .mat-elevation-z5{
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  /* z-index: 2; */
 }
 .mat-sidenav a:hover{
   color: red;
+}
+.vertical-menu{
+  min-height: 200px;
 }
 
 .dashboard-dropdown-btn{
@@ -80,6 +83,31 @@ mat-toolbar{
   font-size: 40px;
   min-height: 40px;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.scroll-ele{
+  height: 100px;
+  overflow-y: scroll;
+}
+.mat-sidenav-container{
+  background-image: url("/assets/images/Kaar-Logo1.png");
+  /* background-size: 100% ; */
+  /* width: 100%; */
+  height: 150%;
+}
+.menu-list-button{
+  width: 200px;
+}
+.menu-list-button:hover{
+  color: white;
+  background-color: red;
+}
+.expansion-panel{
+  width: 247px;
+  border: 1px solid red;
+}
+.expansion-panel-header:hover{
+  color: green;
 }
 
 /* #menu {

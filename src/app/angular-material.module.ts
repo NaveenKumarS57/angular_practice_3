@@ -87,6 +87,13 @@ export interface Signup_Det{
   name: string,
   empid: number
 }
+export interface Database{
+  mailid: string,
+  password: string,
+  name: string,
+  empid: number,
+  id: number
+}
 export enum SideNavDirection {
   Left = 'left',
   Right = 'right',

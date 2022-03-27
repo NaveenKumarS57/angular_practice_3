@@ -1,0 +1,145 @@
+<div>
+  <div>
+    <table style="width: 600px;" *ngIf="this.logdata.length > 0">
+      <tr>
+        <th>S.No</th>
+        <th>Mail Id</th>
+        <th>Name</th>
+        <th>Employee Id</th>
+        <th>id</th>
+      </tr>
+      <tr *ngFor="let a of logdata let i=index">
+        <!-- <p>1234</p>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td> -->
+        <td>{{i+1}}</td>
+        <td>{{a.mailid}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.empid}}</td>
+        <td>{{a.id}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- multi="true" *ngIf="this.logdata.length > 0" -->
+  <div>
+    <mat-accordion multi="true" *ngIf="this.logdata.length > 0">
+      <mat-expansion-panel *ngFor="let a of logdata let i=index">
+        <mat-expansion-panel-header>
+          <span>Get your details by your mail id</span><p style="color: red;">:  {{a.mailid}}</p>
+        </mat-expansion-panel-header>
+          <span>Your registration id</span><p style="color: blue;">-->{{a.id}}</p>
+          <span>Your Name</span><p style="color: blue;">-->{{a.name}}</p>
+          <span>Your Employee Id</span><p style="color: blue;">-->{{a.empid}}</p>
+        <mat-action-row>
+          <button mat-button color="primary" type="submit" (click)="EditData(a.id)">Edit</button>
+          <button mat-button color="warn" type="submit" (click)="DeleteData(this.a)">delete</button>
+         </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <p class="info-text mat-body-2" *ngIf="this.logdata.length <=0">No posts added yet</p>
+  </div>
+
+
+</div>
+<!-- <button mat-raised-button (click)="EditData("abc")">click here</button> -->
+
+<!-- <ng-template #dialog let model>
+  <div class="modal-header">
+    <h4 class="model-title">new</h4>
+    <button type="button" class="close" pull-right aria-label="close" (click)="modal.dismiss('cross click')">
+      <span arial-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="model-body">
+  <form>
+    <div class="form-group">
+      <label >name</label>
+      <input type="text" class="form-control">
+    </div>
+  </form>
+  </div>
+  <div class="model-footer">
+    <button type="button" class="btn-outline-dark" pull-right (click)="modal.dismiss('cross click')">save</button>
+  </div>
+
+</ng-template> -->
+
+
+<!-- <div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+
+      <div class="modal-content">
+        <mat-card class="box">
+          <mat-card-header style="font-size: 30px;">udate</mat-card-header>
+          <mat-card-content>
+            <form (ngSubmit)="EditData()">
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" formControlName="mailid" placeholder="Enter mailid" required>
+                <mat-error *ngIf="updateForm.invalid">Please enter Mail Id</mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" formControlName="password" placeholder="Enter Password" required>
+                <mat-error *ngIf="updateForm.invalid">Please enter Password</mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" formControlName="name" placeholder="Enter your Name" required>
+                <mat-error *ngIf="updateForm.invalid">Please enter your Name</mat-error>
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" formControlName="empid" placeholder="Enter employee id" required>
+                <mat-error *ngIf="updateForm.invalid">Please enter Employee Id</mat-error>
+
+              </mat-form-field>
+              <button mat-stroked-button color="accent" type="submit" [disabled]="updateForm.invalid" fxFill>Update</button>
+            </form>
+            <br>
+            <span style="font-size: 18px;">if you are registered user kindly sign in</span>
+            <br>
+          <br>
+          <button mat-raised-button color="primary" [routerLink]="'/login'" fxFill>Sign In</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <mat-accordion>
+  <mat-expansion-panel-header>
+    <p>Get your data with your mail:</p>
+
+  </mat-expansion-panel-header>
+</mat-accordion> -->
+
+
+<!-- <div>
+  <div>
+    <mat-expansion-panel-header>
+      Get your data with your mail:
+    </mat-expansion-panel-header>
+    <mat-accordion multi="true" *ngIf="logdata.length > 0">
+      <mat-expansion-panel *ngFor="let post of logdata let i=index">
+        <mat-expansion-panel-header>
+          Get your data with your mail: {{ post.mailid }}
+        </mat-expansion-panel-header>
+        <p>Id:{{ post.id }}</p>
+        <p>Name:{{ post.mailid }}</p>
+        <p>Employee Id/Roll No{{ post.empid }}</p>
+        <mat-action-row>
+          <button mat-button color="primary">Edit</button>
+          <button mat-button (click)="deletedata()" color="warn">Delete</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <p class="info-text mat-body-2" *ngIf="logdata.length <=0">No posts added yet</p>
+
+  </div>
+</div> -->
